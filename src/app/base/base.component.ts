@@ -8,11 +8,10 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 export class BaseComponent implements OnInit {
   nativeElement: any;
 
-  constructor(public elementRef: ElementRef) {
-    this.nativeElement = elementRef.nativeElement;
-  }
+  constructor(public elementRef: ElementRef) {}
 
   ngOnInit() {
+    this.nativeElement = this.elementRef.nativeElement;
   }
 
 }
